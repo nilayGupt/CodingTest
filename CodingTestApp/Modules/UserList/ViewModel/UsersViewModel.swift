@@ -37,9 +37,12 @@ class UsersViewModel {
     
     var selectedUser: UsersResponse?
     
-    var reloadTableViewClosure: (()->())?
-    var showAlertClosure: (()->())?
-    var updateLoadingStatus: (()->())?
+    typealias listner = ()->()
+    var reloadTableViewClosure: (listner)?
+    var showAlertClosure: (listner)?
+    var updateLoadingStatus: (listner)?
+    
+    
     
     init( apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService

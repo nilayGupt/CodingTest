@@ -79,7 +79,7 @@ class UsersListViewController: UIViewController {
 
 }
 
-//MARK: TableView Delegate and DataSource
+//MARK: - TableView Delegate and DataSource
 extension UsersListViewController : UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {

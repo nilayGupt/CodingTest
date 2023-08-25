@@ -22,7 +22,6 @@
 		C36BADC62A986EFC00FB2844 /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BADC52A986EFC00FB2844 /* UserDetailView.swift */; };
 		C36BADD22A98861000FB2844 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BADD12A98861000FB2844 /* UserDetailViewModel.swift */; };
 		C36BADD52A9891C200FB2844 /* PostsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BADD42A9891C200FB2844 /* PostsResponse.swift */; };
-		C36BADDB2A98A28300FB2844 /* BasicUserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BADDA2A98A28200FB2844 /* BasicUserDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		C36BADC52A986EFC00FB2844 /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		C36BADD12A98861000FB2844 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		C36BADD42A9891C200FB2844 /* PostsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsResponse.swift; sourceTree = "<group>"; };
-		C36BADDA2A98A28200FB2844 /* BasicUserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicUserDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,7 +193,6 @@
 		C36BADCA2A9884BD00FB2844 /* UserDetails */ = {
 			isa = PBXGroup;
 			children = (
-				C36BADD92A98A1E300FB2844 /* Components */,
 				C36BADD32A98917500FB2844 /* Model */,
 				C36BADCD2A9884E000FB2844 /* View */,
 				C36BADCC2A9884D400FB2844 /* ViewModel */,
@@ -250,14 +247,6 @@
 				C36BADD42A9891C200FB2844 /* PostsResponse.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C36BADD92A98A1E300FB2844 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				C36BADDA2A98A28200FB2844 /* BasicUserDetailView.swift */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,7 +392,6 @@
 				C36BADBF2A985AE800FB2844 /* APIService.swift in Sources */,
 				C36BAD842A97EDDE00FB2844 /* SceneDelegate.swift in Sources */,
 				C36BADC32A98678B00FB2844 /* Constants.swift in Sources */,
-				C36BADDB2A98A28300FB2844 /* BasicUserDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

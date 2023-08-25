@@ -1,5 +1,6 @@
 
 import Foundation
+
 struct UsersResponse : Codable {
 	let id : Int?
 	let name : String?

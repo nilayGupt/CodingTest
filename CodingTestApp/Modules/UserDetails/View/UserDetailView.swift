@@ -13,7 +13,7 @@ struct UserDetailView: View {
     
     var body: some View {
         
-        GeometryReader { geo in
+        GeometryReader { _ in
             if viewModel.isLoading{
                 ZStack(alignment: .center){
                     ProgressView()
