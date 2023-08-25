@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="UsersTableViewCell" rowHeight="111" id="KGk-i7-Jjw" customClass="UsersTableViewCell" customModule="CodingTestApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="111"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aec-3x-PCd">
+                        <rect key="frame" x="10" y="10" width="323" height="91"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-3y-nKN">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="91"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name- " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvd-eq-eum">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="40.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email- " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEF-Na-azC">
+                                        <rect key="frame" x="0.0" y="50.666666666666657" width="323" height="40.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SA0-3y-nKN" firstAttribute="leading" secondItem="aec-3x-PCd" secondAttribute="leading" id="4VB-f9-0zR"/>
+                            <constraint firstItem="SA0-3y-nKN" firstAttribute="top" secondItem="aec-3x-PCd" secondAttribute="top" id="BBa-ux-XYr"/>
+                            <constraint firstAttribute="trailing" secondItem="SA0-3y-nKN" secondAttribute="trailing" id="Gey-Gh-xME"/>
+                            <constraint firstAttribute="bottom" secondItem="SA0-3y-nKN" secondAttribute="bottom" id="Lpt-ok-n29"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="aec-3x-PCd" secondAttribute="trailing" constant="10" id="8v2-BA-8RC"/>
+                    <constraint firstItem="aec-3x-PCd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="OqF-qK-FaQ"/>
+                    <constraint firstAttribute="bottom" secondItem="aec-3x-PCd" secondAttribute="bottom" constant="10" id="U1W-ca-2zF"/>
+                    <constraint firstItem="aec-3x-PCd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="emM-oc-HGF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="userEmailLabel" destination="hEF-Na-azC" id="Hei-to-HHs"/>
+                <outlet property="userNameLabel" destination="Zvd-eq-eum" id="Iuj-11-Ywc"/>
+            </connections>
+            <point key="canvasLocation" x="37.404580152671755" y="43.309859154929576"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
