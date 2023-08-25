@@ -15,9 +15,6 @@ class UserDetailViewModel: ObservableObject {
     
     let apiService: APIServiceProtocol
     
-    var showAlertClosure: (()->())?
-    var updateLoadingStatus: (()->())?
-    
     init( apiService: APIServiceProtocol = APIService()) {
         self.apiService = apiService
     }
