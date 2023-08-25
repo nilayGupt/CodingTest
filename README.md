@@ -4,7 +4,7 @@ An `iOS` user list app that show the list of users and user's detail with user's
 
 ### How it works
 
-![](https://github.com/nilayGupt/CodingTest/tree/main/CodingTestApp/Assets/Assets.xcassets/gifs/appDemo.dataset/appDemo.gif)
+![](https://github.com/nilayGupt/CodingTest/blob/main/CodingTestApp/Assets/Assets.xcassets/gifs/appDemo.dataset/appDemo.gif)
 
 ### System requirements
 
