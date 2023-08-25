@@ -2,7 +2,7 @@
 //  UserDetailView.swift
 //  CodingTestApp
 //
-//  Created by deq on 25/08/23.
+//  Created by Nilay on 25/08/23.
 //
 
 import SwiftUI
@@ -50,7 +50,7 @@ struct UserDetailView_Previews: PreviewProvider {
             ZStack(alignment: .leading){
                    
                         Rectangle()
-                            .fill(Color.pink)
+                            .fill(Color.gray)
                     
                     VStack(alignment: .leading) {
                         Text(viewModel.userDetail?.name ?? "")
@@ -88,18 +88,24 @@ struct UserDetailView_Previews: PreviewProvider {
                 Rectangle()
                     .fill(Color.white)
                     .cornerRadius(20)
-                
-                List(viewModel.userPosts ?? [], id: \.self) { item in
-                    Text(item.title ?? "")
-                }.padding(.leading, -10)
-                .padding(.trailing, -10)
-                .padding(.top, 20)
-                .scrollContentBackground(.hidden)
+                VStack(){
+                    Text("Posts")
+                        .foregroundColor(.black)
+                        .font(.title)
+                        .bold()
+                        .padding(.top, 6)
+                    List(viewModel.userPosts ?? [], id: \.self) { item in
+                        Text(item.title ?? "")
+                    }.padding(.leading, -10)
+                        .padding(.trailing, -10)
+                        .padding(.top, 0)
+                        .scrollContentBackground(.hidden)
+                }
             }
             
             
             .edgesIgnoringSafeArea(.bottom)
-            .padding(.top, UIScreen.main.bounds.height * 0.3)
+            .padding(.top, UIScreen.main.bounds.height * 0.25)
             
         }
 

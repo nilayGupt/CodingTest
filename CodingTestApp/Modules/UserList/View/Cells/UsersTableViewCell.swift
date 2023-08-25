@@ -2,16 +2,18 @@
 //  UsersTableViewCell.swift
 //  CodingTestApp
 //
-//  Created by deq on 25/08/23.
+//  Created by Nilay on 25/08/23.
 //
 
 import UIKit
 
-class UsersTableViewCell: UITableViewCell {
+class UsersTableViewCell: UITableViewCell,Reusable {
     @IBOutlet weak var userNameLabel : UILabel!
     @IBOutlet weak var userEmailLabel : UILabel!
+    @IBOutlet weak var userImageView : UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+       
         // Initialization code
     }
 

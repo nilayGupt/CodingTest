@@ -2,7 +2,7 @@
 //  UsersListViewController.swift
 //  CodingTestApp
 //
-//  Created by deq on 25/08/23.
+//  Created by Nilay on 25/08/23.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ class UsersListViewController: UIViewController {
     lazy var viewModel: UsersViewModel = {
         return UsersViewModel()
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Init the static view
@@ -24,10 +24,10 @@ class UsersListViewController: UIViewController {
         // init view model
         initVM()
     }
-
+    
     //Mark: Setup View Methods
     func initView() {
-        userTableView.register(UINib(nibName: Cells.UsersTableViewCellId, bundle: nil), forCellReuseIdentifier: Cells.UsersTableViewCellId)
+        userTableView.register(UINib(nibName: UsersTableViewCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: UsersTableViewCell.reuseIdentifier)
         userTableView.estimatedRowHeight = 140
         userTableView.rowHeight = UITableView.automaticDimension
     }
@@ -68,35 +68,33 @@ class UsersListViewController: UIViewController {
         }
         
         viewModel.initFetch()
-        
     }
     
     func showAlert( _ message: String ) {
-        let alert = UIAlertController(title: Strings.alertTitle, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: CommonStrings.alertTitle, message: message, preferredStyle: .alert)
         alert.addAction( UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-
 }
 
 //MARK: - TableView Delegate and DataSource
 extension UsersListViewController : UITableViewDelegate, UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfCells
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cells.UsersTableViewCellId , for: indexPath) as? UsersTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: UsersTableViewCell.reuseIdentifier , for: indexPath) as? UsersTableViewCell else {
             fatalError("Cell not exists")
         }
         let cellVM = viewModel.getCellViewModel( at: indexPath )
-        cell.userNameLabel.text = "Name- \(cellVM.titleText)"
-        cell.userEmailLabel.text = "Email- \(cellVM.emailText)"
+        cell.userNameLabel.text = "\(cellVM.titleText)"
+        cell.userEmailLabel.text = "\(cellVM.emailText)"
+        if let image = UIImage.createInitialsImage(name: cellVM.titleText, size: CGSize(width: 100, height: 100)) {
+            cell.userImageView.image = image
+        }
+            
         return cell
     }
     
@@ -105,13 +103,11 @@ extension UsersListViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     self.viewModel.userPressed(at: indexPath)
+        self.viewModel.userPressed(at: indexPath)
         let viewModel = UserDetailViewModel()
         viewModel.userDetail = self.viewModel.selectedUser
         let swiftUIViewController = UIHostingController(rootView: UserDetailView(viewModel: viewModel))
-        
         self.navigationController?.pushViewController(swiftUIViewController, animated: true)
-
     }
-
+    
 }

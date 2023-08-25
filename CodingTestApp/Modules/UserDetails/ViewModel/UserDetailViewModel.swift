@@ -2,7 +2,7 @@
 //  UserDetailViewModel.swift
 //  CodingTestApp
 //
-//  Created by deq on 25/08/23.
+//  Created by Nilay on 25/08/23.
 //
 
 import Foundation
